@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookClone", "FacebookClone\FacebookClone.csproj", "{CE56C19D-BBB7-410E-B3BF-2A2C1855F3EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookClone.Tests", "FacebookClone.Tests\FacebookClone.Tests.csproj", "{48BAAB3B-1B3C-4A2B-8B07-1DA5A9D2D089}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE56C19D-BBB7-410E-B3BF-2A2C1855F3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE56C19D-BBB7-410E-B3BF-2A2C1855F3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE56C19D-BBB7-410E-B3BF-2A2C1855F3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE56C19D-BBB7-410E-B3BF-2A2C1855F3EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BAAB3B-1B3C-4A2B-8B07-1DA5A9D2D089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BAAB3B-1B3C-4A2B-8B07-1DA5A9D2D089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BAAB3B-1B3C-4A2B-8B07-1DA5A9D2D089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BAAB3B-1B3C-4A2B-8B07-1DA5A9D2D089}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44C1EE37-2799-444D-AB00-BBE9C089569F}
+	EndGlobalSection
+EndGlobal
