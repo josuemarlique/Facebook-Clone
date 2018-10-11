@@ -2,30 +2,117 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-sm">
+            <h2 class="pb-5">
+                Connect with friends and the
+                world around you on Facebook Clone.
+            </h2>
+            <p class="pb-5">
+                <i class="fal fa-newspaper fa-3x pr-3"></i>
+                <span class="font-weight-bold"> See photos and updates </span>
+                <span class=""> from friends in News Feed. </span>
+            </p>
+            <p class="pb-5">
+                <i class="fas fa-bullhorn fa-3x pr-3"></i>
+                <span class="font-weight-bold"> Share what's new </span>
+                <span class=""> in your life on your Timeline. </span>
+            </p>
+            <p class="pb-5">
+                <i class="fal fa-project-diagram fa-3x pr-3"></i>
+                <span class="font-weight-bold"> Find more </span>
+                <span class=""> of what you're looking for with Facebook Search. </span>
+            </p>
+
+        </div>
+        <div class="col-sm">
+            <h2 class="mb-3">Sign Up</h2>
+            <h5 class="mb-3">It’s free and always will be.</h5>
+            <form class="needs-validation" novalidate="">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="password">
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="country">Month</label>
+                        <select class="custom-select d-block w-100" id="country" required="">
+                            <option value="0">Month</option>
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">Jun</option>
+                            <option value="7">Jul</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="country">Day</label>
+                        <select class="custom-select d-block w-100" id="day" required="">
+                            <option value="0">Day</option>
+                            @for (int i = 1; i <= 31; i++)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="country">Year</label>
+                        <select class="custom-select d-block w-100" id="year" required="">
+                            <option value="0">Year</option>
+                            @for (int i = 2018; i >= 1985; i--)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+
+                </div>
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio form-check-inline">
+                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                        <label class="custom-control-label" for="credit">Female</label>
+                    </div>
+                    <div class="custom-control custom-radio form-check-inline">
+                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                        <label class="custom-control-label" for="debit">Male</label>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
