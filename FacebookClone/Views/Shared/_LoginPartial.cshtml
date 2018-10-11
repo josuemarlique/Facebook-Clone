@@ -1,4 +1,7 @@
 ﻿@using Microsoft.AspNet.Identity
+@model FacebookClone.Models.LoginViewModel
+
+
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
@@ -16,7 +19,14 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>
+            @using (Html.BeginForm("HomeLogin", "Account", null, FormMethod.Post, new {@class="form-check-inline"} ))
+            {
+                @Html.AntiForgeryToken()
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control mr-2", placeholder="Email"})
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control mr-2", placeholder = "password" })
+                <input type="submit" value="Log in" class="btn btn-light" />
+            }
+        </li>
     </ul>
 }
