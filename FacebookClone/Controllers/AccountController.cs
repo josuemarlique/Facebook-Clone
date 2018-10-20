@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FacebookClone.Models;
+using FacebookClone.Models.Account;
 
 namespace FacebookClone.Controllers
 {
