@@ -3,7 +3,7 @@ namespace FacebookClone.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialModels : DbMigration
+    public partial class InitialModel : DbMigration
     {
         public override void Up()
         {
