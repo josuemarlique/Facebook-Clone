@@ -196,14 +196,56 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810100342190_InitialModels.cs" />
-    <Compile Include="Migrations\201810100342190_InitialModels.Designer.cs">
-      <DependentUpon>201810100342190_InitialModels.cs</DependentUpon>
+    <Compile Include="Migrations\201810200437293_InitialModel.cs" />
+    <Compile Include="Migrations\201810200437293_InitialModel.Designer.cs">
+      <DependentUpon>201810200437293_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810201919148_AddNameAndDOBToUser.cs" />
+    <Compile Include="Migrations\201810201919148_AddNameAndDOBToUser.Designer.cs">
+      <DependentUpon>201810201919148_AddNameAndDOBToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810201927244_AddPostModel.cs" />
+    <Compile Include="Migrations\201810201927244_AddPostModel.Designer.cs">
+      <DependentUpon>201810201927244_AddPostModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810201942555_AddGenderModel.cs" />
+    <Compile Include="Migrations\201810201942555_AddGenderModel.Designer.cs">
+      <DependentUpon>201810201942555_AddGenderModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810201944512_AddProfilePicToUser.cs" />
+    <Compile Include="Migrations\201810201944512_AddProfilePicToUser.Designer.cs">
+      <DependentUpon>201810201944512_AddProfilePicToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810202000382_AddGenderToUser.cs" />
+    <Compile Include="Migrations\201810202000382_AddGenderToUser.Designer.cs">
+      <DependentUpon>201810202000382_AddGenderToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810202013578_PreventUserPostCascadeDelete.cs" />
+    <Compile Include="Migrations\201810202013578_PreventUserPostCascadeDelete.Designer.cs">
+      <DependentUpon>201810202013578_PreventUserPostCascadeDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Account\AddPhoneNumberViewModel.cs" />
+    <Compile Include="Models\Account\ChangePasswordViewModel.cs" />
+    <Compile Include="Models\Account\ConfigureTwoFactorViewModel.cs" />
+    <Compile Include="Models\Account\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="Models\Account\ExternalLoginListViewModel.cs" />
+    <Compile Include="Models\Account\FactorViewModel.cs" />
+    <Compile Include="Models\Account\ForgotPasswordViewModel.cs" />
+    <Compile Include="Models\Account\ForgotViewModel.cs" />
+    <Compile Include="Models\Account\IndexViewModel.cs" />
+    <Compile Include="Models\Account\LoginViewModel.cs" />
+    <Compile Include="Models\Account\ManageLoginsViewModel.cs" />
+    <Compile Include="Models\Account\RegisterViewModel.cs" />
+    <Compile Include="Models\Account\ResetPasswordViewModel.cs" />
+    <Compile Include="Models\Account\SendCodeViewModel.cs" />
+    <Compile Include="Models\Account\SetPasswordViewModel.cs" />
+    <Compile Include="Models\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="Models\Account\VerifyPhoneNumberViewModel.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -321,8 +363,26 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810100342190_InitialModels.resx">
-      <DependentUpon>201810100342190_InitialModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810200437293_InitialModel.resx">
+      <DependentUpon>201810200437293_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810201919148_AddNameAndDOBToUser.resx">
+      <DependentUpon>201810201919148_AddNameAndDOBToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810201927244_AddPostModel.resx">
+      <DependentUpon>201810201927244_AddPostModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810201942555_AddGenderModel.resx">
+      <DependentUpon>201810201942555_AddGenderModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810201944512_AddProfilePicToUser.resx">
+      <DependentUpon>201810201944512_AddProfilePicToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810202000382_AddGenderToUser.resx">
+      <DependentUpon>201810202000382_AddGenderToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810202013578_PreventUserPostCascadeDelete.resx">
+      <DependentUpon>201810202013578_PreventUserPostCascadeDelete.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
