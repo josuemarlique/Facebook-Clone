@@ -7,13 +7,13 @@ namespace FacebookClone.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialModel : IMigrationMetadata
+    public sealed partial class PopulateGender : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateGender));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810200437293_InitialModel"; }
+            get { return "201810272334452_PopulateGender"; }
         }
         
         string IMigrationMetadata.Source
