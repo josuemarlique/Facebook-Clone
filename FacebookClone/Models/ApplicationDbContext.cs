@@ -37,8 +37,10 @@ namespace FacebookClone.Models
             modelBuilder.Entity<ApplicationUser>()
                 .HasRequired(u => u.Gender)
                 .WithMany()
-                .Map(m => m.MapKey("GenderId"))
                 .WillCascadeOnDelete(false);
+            modelBuilder.Entity<ApplicationUser>()
+                .Property(u => u.DateOfBirth)
+                .HasColumnType("Date");
 
 
             modelBuilder.Entity<Post>()

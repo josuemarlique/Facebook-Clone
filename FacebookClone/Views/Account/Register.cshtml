@@ -1,41 +1,94 @@
-﻿@model FacebookClone.Models.RegisterViewModel
+﻿@model FacebookClone.Models.Account.RegisterViewModel
 @{
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-sm-12 col-md-6">
+            <h2 class="pb-5">
+                Connect with friends and the
+                world around you on Facebook Clone.
+            </h2>
+            <p class="d-none d-md-block d-lg-block pb-5">
+                <i class="fal fa-newspaper fa-3x pr-3"></i>
+                <span class="font-weight-bold"> See photos and updates </span>
+                <span class=""> from friends in News Feed. </span>
+            </p>
+            <p class="d-none d-md-block d-lg-block pb-5">
+                <i class="fas fa-bullhorn fa-3x pr-3"></i>
+                <span class="font-weight-bold"> Share what's new </span>
+                <span class=""> in your life on your Timeline. </span>
+            </p>
+            <p class="d-none d-md-block d-lg-block pb-5">
+                <i class="fal fa-project-diagram fa-3x pr-3"></i>
+                <span class="font-weight-bold"> Find more </span>
+                <span class=""> of what you're looking for with Facebook Search. </span>
+            </p>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+        <div class="col-sm-12 col-md-6">
+            <h2 class="mb-3">Sign Up</h2>
+            <h5 class="mb-3">It’s free and always will be.</h5>
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "Please fix the following errors below", new { @class = "text-danger" })
+                <div class="row form-group">
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        @Html.LabelFor(m => m.FirstName)
+                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        @Html.LabelFor(m => m.LastName)
+                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                    </div>
 
-@section Scripts {
+                    <div class="col-sm-12 mb-3">
+                        @Html.LabelFor(m => m.Email)
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = "you@example.com" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", type = "password", placeholder = "password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        @Html.LabelFor(m => m.ConfirmPassword)
+                        @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control", type = "password", placeholder = "password" })
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-sm-12 mb-3">
+                        @Html.LabelFor(m => m.DateOfBirth)
+                        @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control", type = "date", placeholder = "you@example.com" })
+                        @Html.ValidationMessageFor(m => m.DateOfBirth, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="d-block my-3 form-group">
+
+                    @foreach (var gender in Model.Genders)
+                    {
+                        <div class="form-check-inline">
+                            @Html.RadioButtonFor(m => m.GenderId, gender.GenderId, new { @class = "form-check-input", type = "radio" })
+                            @Html.Label(gender.Name, new { @class = "form-check-label" })
+                        </div>
+                    }
+                    
+                        <p>@Html.ValidationMessageFor(m => m.GenderId, "", new { @class = "text-danger" })</p>
+                </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit" id="btn_signup">Sign Up</button>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts{
     @Scripts.Render("~/bundles/jqueryval")
 }

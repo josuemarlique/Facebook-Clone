@@ -47,23 +47,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.7.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.7.2\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.8.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.7.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.7.2\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.8.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.7.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.7.2\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.8.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AI.Web, Version=2.7.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.7.2\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    <Reference Include="Microsoft.AI.Web, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.8.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=2.7.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.7.2\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.8.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=2.7.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.2.7.2\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.8.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.4\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
@@ -196,33 +196,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810200437293_InitialModel.cs" />
-    <Compile Include="Migrations\201810200437293_InitialModel.Designer.cs">
-      <DependentUpon>201810200437293_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201810272332170_Initial.cs" />
+    <Compile Include="Migrations\201810272332170_Initial.Designer.cs">
+      <DependentUpon>201810272332170_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810201919148_AddNameAndDOBToUser.cs" />
-    <Compile Include="Migrations\201810201919148_AddNameAndDOBToUser.Designer.cs">
-      <DependentUpon>201810201919148_AddNameAndDOBToUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810201927244_AddPostModel.cs" />
-    <Compile Include="Migrations\201810201927244_AddPostModel.Designer.cs">
-      <DependentUpon>201810201927244_AddPostModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810201942555_AddGenderModel.cs" />
-    <Compile Include="Migrations\201810201942555_AddGenderModel.Designer.cs">
-      <DependentUpon>201810201942555_AddGenderModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810201944512_AddProfilePicToUser.cs" />
-    <Compile Include="Migrations\201810201944512_AddProfilePicToUser.Designer.cs">
-      <DependentUpon>201810201944512_AddProfilePicToUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810202000382_AddGenderToUser.cs" />
-    <Compile Include="Migrations\201810202000382_AddGenderToUser.Designer.cs">
-      <DependentUpon>201810202000382_AddGenderToUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810202013578_PreventUserPostCascadeDelete.cs" />
-    <Compile Include="Migrations\201810202013578_PreventUserPostCascadeDelete.Designer.cs">
-      <DependentUpon>201810202013578_PreventUserPostCascadeDelete.cs</DependentUpon>
+    <Compile Include="Migrations\201810272334452_PopulateGender.cs" />
+    <Compile Include="Migrations\201810272334452_PopulateGender.Designer.cs">
+      <DependentUpon>201810272334452_PopulateGender.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account\AddPhoneNumberViewModel.cs" />
@@ -363,26 +343,11 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810200437293_InitialModel.resx">
-      <DependentUpon>201810200437293_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810272332170_Initial.resx">
+      <DependentUpon>201810272332170_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810201919148_AddNameAndDOBToUser.resx">
-      <DependentUpon>201810201919148_AddNameAndDOBToUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810201927244_AddPostModel.resx">
-      <DependentUpon>201810201927244_AddPostModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810201942555_AddGenderModel.resx">
-      <DependentUpon>201810201942555_AddGenderModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810201944512_AddProfilePicToUser.resx">
-      <DependentUpon>201810201944512_AddProfilePicToUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810202000382_AddGenderToUser.resx">
-      <DependentUpon>201810202000382_AddGenderToUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810202013578_PreventUserPostCascadeDelete.resx">
-      <DependentUpon>201810202013578_PreventUserPostCascadeDelete.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810272334452_PopulateGender.resx">
+      <DependentUpon>201810272334452_PopulateGender.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

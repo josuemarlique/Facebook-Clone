@@ -17,6 +17,7 @@ namespace FacebookClone.Models
         public DateTime CreatedOn { get; set; }
         public Post ProfilePicture { get; set; }
         public Gender Gender { get; set; }
+        public int GenderId { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
