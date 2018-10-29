@@ -9,3 +9,7 @@
 .validation-summary-valid {
     display: none;
 }
+
+.main-content {
+    min-height: 810px;
+}
