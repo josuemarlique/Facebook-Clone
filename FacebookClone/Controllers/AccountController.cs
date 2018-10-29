@@ -64,10 +64,11 @@ namespace FacebookClone.Controllers
             return View();
         }
 
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> HomeLogin(LoginViewModel model, string returnUrl)
+        public async Task<ActionResult> HomeLogin(LoginViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -80,15 +81,13 @@ namespace FacebookClone.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index","Home");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "Invalid login attempt.");
-                    return View(model);
+                    return View("Login");
             }
         }
 
@@ -170,11 +169,18 @@ namespace FacebookClone.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             var genders = _context.Genders.ToList();
             var viewModel = new RegisterViewModel
             {
                 Genders = genders
             };
+
+            
 
             return View(viewModel);
         }
@@ -186,6 +192,11 @@ namespace FacebookClone.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             try
             {
                 model.Genders = _context.Genders.ToList();
