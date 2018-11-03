@@ -13,6 +13,6 @@ namespace FacebookClone.Models
         public string FileExtension { get; set; }
         public DateTime CreatedOn  { get; set; }
         public DateTime ModifiedOn  { get; set; }
-        public virtual ICollection<Post> ChildPost { get; set; }
+        public ICollection<Post> ChildPost { get; set; }
     }
 }
