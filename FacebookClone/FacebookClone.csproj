@@ -196,6 +196,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\IdentityExtension.cs" />
     <Compile Include="Migrations\201810272332170_Initial.cs" />
     <Compile Include="Migrations\201810272332170_Initial.Designer.cs">
       <DependentUpon>201810272332170_Initial.cs</DependentUpon>
@@ -224,6 +225,7 @@
     <Compile Include="Models\Account\VerifyPhoneNumberViewModel.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
